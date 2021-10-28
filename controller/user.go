@@ -5,28 +5,28 @@ import (
 	"github.com/guitarlnw/golang-practices/model"
 )
 
-type IUser interface {
+type IUserCtl interface {
 	GetUser(c *fiber.Ctx) error
 }
 
-type User struct {
-	UserModel model.IUser
+type UserCtl struct {
+	UserModel model.IUserModel
 }
 
-func NewUser() IUser {
-	return &User{
+func NewUser() IUserCtl {
+	return &UserCtl{
 		UserModel: model.NewUser(),
 	}
 }
 
-func (u *User) GetUser(c *fiber.Ctx) error {
+func (u *UserCtl) GetUser(c *fiber.Ctx) error {
 	id := c.Params("id")
 	if id == "" {
 		return c.Status(400).JSON("Bad request")
 	}
-	user := model.User{}
+	user := model.UserModel{}
 	if err := u.UserModel.GetUserByID(id, &user); err != nil {
-		return c.Status(404).JSON(err.Error())
+		return c.Status(404).SendString(err.Error())
 	}
 	return c.Status(200).JSON(user)
 }

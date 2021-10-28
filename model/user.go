@@ -2,25 +2,25 @@ package model
 
 import "errors"
 
-type IUser interface {
-	GetUserByID(id string, result *User) error
+type IUserModel interface {
+	GetUserByID(id string, result *UserModel) error
 }
 
-type User struct {
+type UserModel struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
 }
 
-func NewUser() IUser {
-	return &User{}
+func NewUser() IUserModel {
+	return &UserModel{}
 }
 
-func (u User) GetUserByID(id string, result *User) error {
+func (u UserModel) GetUserByID(id string, result *UserModel) error {
 	// Should implement database logic here
 
 	if id == "1" {
 		result.ID = "1"
-		result.Name = "2"
+		result.Name = "Karn"
 		return nil
 	}
 	return errors.New("not found")

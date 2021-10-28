@@ -1,0 +1,11 @@
+mode: set
+github.com/guitarlnw/golang-practices/model/user.go:14.27,16.2 1 1
+github.com/guitarlnw/golang-practices/model/user.go:18.68,21.15 1 1
+github.com/guitarlnw/golang-practices/model/user.go:26.2,26.32 1 1
+github.com/guitarlnw/golang-practices/model/user.go:21.15,25.3 3 1
+github.com/guitarlnw/golang-practices/controller/user.go:16.25,20.2 1 0
+github.com/guitarlnw/golang-practices/controller/user.go:22.47,24.14 2 1
+github.com/guitarlnw/golang-practices/controller/user.go:27.2,28.59 2 1
+github.com/guitarlnw/golang-practices/controller/user.go:31.2,31.33 1 1
+github.com/guitarlnw/golang-practices/controller/user.go:24.14,26.3 1 0
+github.com/guitarlnw/golang-practices/controller/user.go:28.59,30.3 1 1
