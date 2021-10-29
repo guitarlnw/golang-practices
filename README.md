@@ -19,3 +19,4 @@
 
 ### Generate mockery command
 - ```mockery --all --keeptree```
+- ```mockery --name="{Interface name}"```
